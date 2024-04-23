@@ -11,12 +11,9 @@ function Navigation() {
                 <ul className="nav_links_container">
                     <li className="nav_link">
                         <Link to="/shop" >Shop</Link>
-                    </li> <li className="nav_link">
-                        <Link to="/shop" >Shop</Link>
-                    </li> <li className="nav_link">
-                        <Link to="/shop" >Shop</Link>
-                    </li> <li className="nav_link">
-                        <Link to="/shop" >Shop</Link>
+                    </li>
+                    <li className="nav_link">
+                        <Link to="/sign-in" >Sign In</Link>
                     </li>
                 </ul>
             </nav>

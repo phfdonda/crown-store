@@ -2,7 +2,6 @@ import styles from './Category.module.scss'
 
 function Category(props) {
     const { title, cta, key, imageUrl } = props;
-    console.log(props)
     return (
         <div className={styles.category_container} key={key}>
             <div className={styles.background_image} style={{

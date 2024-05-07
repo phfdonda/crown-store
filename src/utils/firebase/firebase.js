@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app"
 import {
     getAuth,
     signInWithPopup,
+    signInWithEmailAndPassword,
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
 } from "firebase/auth"
 
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore"
-import {} from "firebase/auth"
 
 const firebaseConfig = {
     apiKey: "AIzaSyDe0eA2XlX5X1slxcrHBudMagK-h-9oVlA",
@@ -28,6 +28,11 @@ provider.setCustomParameters({
 
 export const auth = getAuth()
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider)
+export const signInUserWithEmailAndPassword = async (email, password) => {
+    if (!email || !password) return
+
+    return await signInWithEmailAndPassword(auth, email, password)
+}
 
 export const db = getFirestore()
 

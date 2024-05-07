@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase"
+import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../../utils/firebase/firebase"
 import './SignUpForm.scss'
-import FormInput from "./form_input/FormInput"
-import Button from "../button/Button"
+import FormInput from "../form_input/FormInput"
+import Button from "../../button/Button"
 
 function SignUpForm() {
 
@@ -22,7 +22,6 @@ function SignUpForm() {
 
     function handleChange(event) {
         const { name, value } = event.target
-        console.log(name)
         setFormFields({ ...formFields, [name]: value })
     }
 
@@ -50,11 +49,11 @@ function SignUpForm() {
             <form onSubmit={handleSubmit} id="signUp" >
 
                 <FormInput label="Display Name" name="displayName" id="displayName" type="text" onChange={handleChange} value={displayName} required />
-                <FormInput label="E-mail" name="email" id="email" type="email" onChange={handleChange} value={email} required />
-                <FormInput label="Password" name="password" id="password" type="password" onChange={handleChange} value={password} required />
+                <FormInput label="E-mail" name="email" id="email_sign_up" type="email" onChange={handleChange} value={email} required />
+                <FormInput label="Password" name="password" id="password_sign_up" type="password" onChange={handleChange} value={password} required />
                 <FormInput label="Confirm Password" name="confirmPassword" id="confirmPassword" type="password" onChange={handleChange} value={confirmPassword} required />
 
-                <Button buttonType="google" id="submit" type="submit" name='submit'>Submit</Button>
+                <Button id="submit_sign_up" type="submit" name='submit'>Sign Up</Button>
             </form>
         </div >
     )

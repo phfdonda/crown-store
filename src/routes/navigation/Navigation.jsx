@@ -7,11 +7,11 @@ import CartDropdown from "../../components/cart-dropdown/CartDropdown"
 import { useContext } from "react"
 import { UserContext } from "../../contexts/UserContext"
 
+
 import './Navigation.scss'
 
 function Navigation() {
     const { currentUser } = useContext(UserContext)
-
 
     return (
         <>

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Navigation from "./routes/navigation/Navigation"
 import Home from "./routes/home/Home"
-import Shop from "./routes/home/Shop"
+import Shop from "./routes/shop/Shop"
 import Authentication from "./routes/home/authentication/Authentication"
 
 function App() {

@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals"
 import { UserProvider } from "./contexts/UserContext"
 import { ProductsProvider } from "./contexts/ProductsContext"
 import { CartProvider } from "./contexts/CartContext"
+import { DropdownProvider } from "./contexts/DropdownContext"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -15,7 +16,9 @@ root.render(
             <UserProvider>
                 <ProductsProvider>
                     <CartProvider>
-                        <App />
+                        <DropdownProvider>
+                            <App />
+                        </DropdownProvider>
                     </CartProvider>
                 </ProductsProvider>
             </UserProvider>

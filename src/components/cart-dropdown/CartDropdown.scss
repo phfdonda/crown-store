@@ -2,7 +2,7 @@
     position: absolute;
     width: 240px;
     height: 340px;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 20px;
     border: 1px solid black;
@@ -24,10 +24,34 @@
         overflow-x: hidden;
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 0, 0, 0.6);
+        padding: 5px;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    li {
+        margin-bottom: 15px;
+    }
+
+    li,
+    .item-description {
+        display: flex;
+        justify-content: start;
+    }
+
+    .item-description {
+        padding-left: 15px;
+        flex-direction: column;
     }
 
     button {
         margin-top: auto;
         font-size: 10px;
     }
+}
+
+.open {
+    display: flex;
 }

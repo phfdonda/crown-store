@@ -7,16 +7,9 @@ import './Authentication.scss'
 function Authentication() {
 
 
-
-    // const logUserWithEmailAndPassword = async () => {
-    //     const { user } = await signInWithGooglePopup()
-    //     createUserDocumentFromAuth(user)
-    // }
-
-
     return (
         <div className="authentication-container">
-            <SignInForm></SignInForm>
+            <SignInForm />
             <SignUpForm />
         </div>
 

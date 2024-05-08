@@ -6,6 +6,7 @@ import Button from "../../button/Button"
 
 function SignUpForm() {
 
+
     const defaultFormFields = {
         displayName: '',
         email: '',

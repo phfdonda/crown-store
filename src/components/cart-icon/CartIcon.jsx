@@ -8,7 +8,11 @@ import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg'
 const CartIcon = () => {
     const { isCartOpen, setIsCartOpen } = useContext(DropdownContext)
     const { cartItems } = useContext(CartContext)
-    const numberOfItems = Object.values(cartItems).reduce((sum, curr) => sum + curr)
+    const quantitiesOfEachItem = Object.values(cartItems)
+    let numberOfItems = 0
+    if (quantitiesOfEachItem.length != 0) {
+        numberOfItems = quantitiesOfEachItem.reduce((sum, curr) => sum + curr)
+    }
     return (
         <button type="button" onClick={() => setIsCartOpen(!isCartOpen)} className='cart-icon-container'>
             <ShoppingIcon className='shopping-icon' />

@@ -8,12 +8,9 @@ export const CartContext = createContext(
 )
 
 export const CartProvider = ({ children }) => {
-    const mockCartItems = {
-        1: 2,
-        4: 1
-    }
+
     // cartItems is an object that connects the product ID do the number of items added, like so: {id: number}
-    const [cartItems, setCartItems] = useState(mockCartItems)
+    const [cartItems, setCartItems] = useState({})
     const value = { cartItems, setCartItems }
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>

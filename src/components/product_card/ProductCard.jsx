@@ -5,14 +5,8 @@ import { CartContext } from "../../contexts/CartContext"
 import "./ProductCard.scss"
 
 const ProductCard = ({ id, name, price, imageUrl }) => {
-    const { cartItems, setCartItems } = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
-    const addItem = () => {
-        let quantity = 0
-        if (cartItems[id]) quantity = cartItems[id]
-        quantity += 1
-        setCartItems({ ...cartItems, [id]: quantity })
-    }
 
     return (
         <li className="product-card-container" >
@@ -22,7 +16,7 @@ const ProductCard = ({ id, name, price, imageUrl }) => {
                 <span className="price">{price}</span>
             </div>
 
-            <Button type="button" onClick={addItem} buttonType="inverted">Add to cart</Button>
+            <Button type="button" onClick={() => addItem(id)} buttonType="inverted">Add to cart</Button>
         </li>
     )
 }
